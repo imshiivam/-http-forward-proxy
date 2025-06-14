@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  http-forward-proxy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: imshiivam/http-forward-proxy:1.0.0
+    container_name: http-forward-proxy
+    hostname: http-forward-proxy
+    restart: always
+    ports:
+      - "8080:8080"
